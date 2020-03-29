@@ -74,6 +74,12 @@ html {
 	display:none;
 }
 
+.subdropdown {
+	display:none;
+}
+
+
+
 .dropdown li{
 	padding: 8px;
 	padding-left:32px;
@@ -131,16 +137,25 @@ html {
 		
 				<li class="dropdown-btn">Second Year</li>
 					<div class="dropdown">
-						<li><a href="#">Link 1</a></li>
-						<li><a href="#">Link 2</a></li>
-						<li><a href="#">Link 3</a></li>
+						<li class="subdropdown-btn">ECE</li>
+							<div class="subdropdown">
+								<li><a href="#">Data Structures & Algorithms</a></li>
+								<li><a href="#">Electronic Devices & Circuits</a></li>
+								<li><a href="#">Engineering Mechanics</a></li>
+								<li><a href="#">Digital Logic Design</a></li>
+								<li><a href="#">Discrete Mathematics</a></li>
+								<li><a href="#">Signals & Systems</a></li>
+							</div>
+						
+						
+						
+						<li>CSE</li>
 					</div>
 				
 				<li class="dropdown-btn">Third Year</li>
 					<div class="dropdown">
-						<li><a href="#">Link 1</a></li>
-						<li><a href="#">Link 2</a></li>
-						<li><a href="#">Link 3</a></li>
+						<li>ECE</li>
+						<li>CSE</li>
 					</div>
 			</ul>
 		</div>
@@ -180,8 +195,29 @@ html {
 			{
 				dropdownContent.style.display = "block";
 			}
-		});
-}
+			});
+		}
+		
+		
+		var dropdown2 = document.getElementsByClassName("subdropdown-btn");
+		var i;
+
+		for (i = 0; i < dropdown2.length; i++) 
+		{
+			dropdown2[i].addEventListener("click", function() {
+			//this.classList.toggle("active");
+			var dropdownContent = this.nextElementSibling;
+			if (dropdownContent.style.display === "block") 
+			{
+				dropdownContent.style.display = "none";
+			} 
+			else 
+			{
+				dropdownContent.style.display = "block";
+			}
+			});
+		}
+		
 </script>
 
 	
