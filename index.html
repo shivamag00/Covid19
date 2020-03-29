@@ -69,6 +69,25 @@ html {
   padding: 15px;
 }
 
+
+.dropdown {
+	display:none;
+}
+
+.dropdown li{
+	padding: 8px;
+	padding-left:32px;
+	margin-bottom: 7px;
+	background-color: #ffffff;
+	color: #000000;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.dropdown li:hover {
+  background-color: #d3d3d3;
+}
+
+
 /* For desktop: */
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -93,33 +112,78 @@ html {
 </head>
 <body>
 
-<div class="header">
-  <h1>Tagnet</h1>
-</div>
+	<div class="header">
+		<h1>Tagnet</h1>
+	</div>
 
-<div class="row">
-  <div class="col-3 menu">
-    <ul>
-    <li id="first">First Year</li>
-    <li id="second">Second Year</li>
-    <li id="third">Third Year</li>
-    </ul>
-  </div>
+	<div class="row">
+		<div class="col-3 menu">
+			<ul>
+				<li class="dropdown-btn">First Year</li>
+					<div class="dropdown">
+						<li><a href="#">Data Structures & Algorithms</a></li>
+						<li><a href="#">Electronic Devices & Circuits</a></li>
+						<li><a href="#">Engineering Mechanics</a></li>
+						<li><a href="#">Digital Logic Design</a></li>
+						<li><a href="#">Discrete Mathematics</a></li>
+						<li><a href="#">Signals & Systems</a></li>
+					</div>
+		
+				<li class="dropdown-btn">Second Year</li>
+					<div class="dropdown">
+						<li><a href="#">Link 1</a></li>
+						<li><a href="#">Link 2</a></li>
+						<li><a href="#">Link 3</a></li>
+					</div>
+				
+				<li class="dropdown-btn">Third Year</li>
+					<div class="dropdown">
+						<li><a href="#">Link 1</a></li>
+						<li><a href="#">Link 2</a></li>
+						<li><a href="#">Link 3</a></li>
+					</div>
+			</ul>
+		</div>
 
-  <div class="col-6">
-    <h1>Home</h1>
-    <p>Greetings!!! Here you can find all the study material, shared by the faculty, for preparation of end-sem.</p>
-  </div>
+		<div class="col-6">
+			<h1>Home</h1>
+			<p>Greetings!!! Here you can find all the study material, shared by the faculty, for preparation of end-sem.</p>
+		</div>
 
-  <div class="col-3 right">
-    <div class="aside">
-      <h2>Latest Material</h2>
-      <p style="text-align:left">Chania is a city on the island of Crete.</p>
-      <p>Crete is a Greek island in the Mediterranean Sea.</p>
-      <p>You can reach Chania airport from all over Europe.</p>
-    </div>
-  </div>
-</div>
+		<div class="col-3 right">
+			<div class="aside">
+				<h2>Latest Material</h2>
+				<p style="text-align:left">Chania is a city on the island of Crete.</p>
+				<p>Crete is a Greek island in the Mediterranean Sea.</p>
+				<p>You can reach Chania airport from all over Europe.</p>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<script>
+	/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+		var dropdown = document.getElementsByClassName("dropdown-btn");
+		var i;
 
+		for (i = 0; i < dropdown.length; i++) 
+		{
+			dropdown[i].addEventListener("click", function() {
+			//this.classList.toggle("active");
+			var dropdownContent = this.nextElementSibling;
+			if (dropdownContent.style.display === "block") 
+			{
+				dropdownContent.style.display = "none";
+			} 
+			else 
+			{
+				dropdownContent.style.display = "block";
+			}
+		});
+}
+</script>
+
+	
 </body>
 </html>
