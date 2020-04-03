@@ -7,7 +7,7 @@
         die("ERROR: Could not connect. " . mysqli_connect_error());
     }
 	
-	echo "hi";
+	//echo "hi";
 	$sql = "SELECT * FROM `view-counter` WHERE No='1'";
 	$result = $link->query($sql);
 	$row = $result->fetch_assoc();
