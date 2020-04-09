@@ -234,6 +234,7 @@ html {
 		<div class="col-3 right">
 			<div class="aside">
 				<h2>Latest Info</h2>
+				<p> New Study Material has been uploaded on 8 April 2020</p>
 				<p> New Study Material has been uploaded on 3 April 2020</p>
 				<p> New Study Material has been uploaded on 31 March 2020</p>
 				<p> Study Materials have been uploaded on 29 March 2020</p>

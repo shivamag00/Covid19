@@ -1,7 +1,7 @@
 <?php
 
 	// Connecting to the database
-	$link = mysqli_connect("sql111.epizy.com", "epiz_25434353", "JdgDDluCoT1z", "epiz_25434353_iiitstudy");
+	$link = mysqli_connect("sql313.epizy.com", "epiz_25488931", "S5aOKuMK4dAI7fP", "epiz_25488931_iiitstudy");
     if($link === false)
 	{
         die("ERROR: Could not connect. " . mysqli_connect_error());
